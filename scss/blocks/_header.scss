@@ -1,0 +1,30 @@
+// Блок: header
+.header {
+  position: relative;
+  z-index: 3;
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+
+    @include respond-to($bp-mobile) {
+      flex-direction: column;
+      gap: $space-xs;
+    }
+  }
+
+  &__logo {
+    font-family: $font-display;
+    font-size: 30px;
+    color: $color-gold;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-snow;
+    }
+  }
+}

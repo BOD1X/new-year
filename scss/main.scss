@@ -1,0 +1,37 @@
+// =========================================================
+// Лабораторна №7 — Новорічна листівка
+// Методологія: BEM. Препроцесор: Sass (SCSS).
+// Збірка: sass scss/main.scss css/style.css
+// =========================================================
+
+// 1. Абстракції (змінні, міксини)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. База
+@import 'base/reset';
+
+// 3. Блоки (один файл = один BEM-блок)
+@import 'blocks/page';
+@import 'blocks/snow';
+@import 'blocks/garland';
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/button';
+@import 'blocks/hero';
+@import 'blocks/tree';
+@import 'blocks/wishes';
+@import 'blocks/wish-card';
+@import 'blocks/countdown';
+@import 'blocks/footer';
+
+// 4. Користувачам, які просять менше руху
+@media (prefers-reduced-motion: reduce) {
+  .snow__flake,
+  .garland__bulb,
+  .tree,
+  .tree__star,
+  .tree__light {
+    animation: none;
+  }
+}

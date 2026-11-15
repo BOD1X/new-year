@@ -1,0 +1,49 @@
+// Блок: wish-card
+.wish-card {
+  @include glass-panel;
+  padding: $space-lg $space-md;
+  text-align: center;
+  border-top: 4px solid $color-gold;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px $color-shadow;
+  }
+
+  &__icon {
+    @include flex-center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto $space-sm;
+    font-size: 36px;
+    border-radius: 50%;
+    background: rgba(255, 207, 92, 0.15);
+  }
+
+  &__title {
+    margin-bottom: $space-xs;
+    font-size: $font-size-lg;
+    color: $color-snow;
+  }
+
+  &__text {
+    color: $color-text-muted;
+  }
+
+  &--red {
+    border-top-color: $color-red;
+
+    .wish-card__icon {
+      background: rgba(230, 57, 70, 0.18);
+    }
+  }
+
+  &--green {
+    border-top-color: #3ddc84;
+
+    .wish-card__icon {
+      background: rgba(61, 220, 132, 0.16);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+// Блок: garland (гірлянда під шапкою)
+.garland {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  height: 34px;
+  margin-top: -2px;
+
+  &__bulb {
+    position: relative;
+    width: 14px;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    background: $color-gold;
+    box-shadow: 0 0 14px 4px $color-gold;
+    animation: garland-blink 2s ease-in-out infinite;
+
+    // дріт
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -12px;
+      width: 2px;
+      height: 12px;
+      background: $color-night-500;
+    }
+
+    &--red {
+      background: $color-red;
+      box-shadow: 0 0 14px 4px $color-red;
+      animation-delay: 0.4s;
+    }
+
+    &--blue {
+      background: $color-blue;
+      box-shadow: 0 0 14px 4px $color-blue;
+      animation-delay: 0.9s;
+    }
+
+    &--green {
+      background: #3ddc84;
+      box-shadow: 0 0 14px 4px #3ddc84;
+      animation-delay: 1.4s;
+    }
+  }
+}
+
+@keyframes garland-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}

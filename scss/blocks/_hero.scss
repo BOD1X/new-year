@@ -1,0 +1,74 @@
+// Блок: hero
+.hero {
+  padding: $space-xl 0;
+
+  @include respond-to($bp-tablet) {
+    padding: $space-lg 0;
+  }
+
+  &__inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: $space-lg;
+
+    @include respond-to($bp-tablet) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__eyebrow {
+    margin-bottom: $space-xs;
+    color: $color-gold;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: $font-size-sm;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 76px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: $color-snow;
+    text-shadow: 0 0 30px rgba(255, 207, 92, 0.35);
+
+    @include respond-to($bp-mobile) {
+      font-size: 48px;
+    }
+  }
+
+  &__year {
+    display: block;
+    color: $color-gold;
+  }
+
+  &__text {
+    max-width: 480px;
+    margin: $space-md 0;
+    color: $color-text-muted;
+    font-size: $font-size-lg;
+
+    @include respond-to($bp-tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+
+    @include respond-to($bp-tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__visual {
+    @include flex-center;
+  }
+}

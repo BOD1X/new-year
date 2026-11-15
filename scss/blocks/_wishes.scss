@@ -1,0 +1,33 @@
+// Блок: wishes
+.wishes {
+  padding: $space-xl 0;
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    color: $color-snow;
+  }
+
+  &__subtitle {
+    max-width: 560px;
+    margin: $space-xs auto $space-lg;
+    text-align: center;
+    color: $color-text-muted;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-md;
+
+    @include respond-to($bp-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

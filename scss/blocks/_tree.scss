@@ -1,0 +1,81 @@
+// Блок: tree (ялинка, inline SVG)
+.tree {
+  width: 100%;
+  max-width: 340px;
+  filter: drop-shadow(0 20px 40px $color-shadow);
+  animation: tree-sway 6s ease-in-out infinite;
+  transform-origin: 50% 100%;
+
+  &__layer {
+    fill: $color-green;
+
+    &--mid {
+      fill: #26a064;
+    }
+
+    &--top {
+      fill: #2fbf79;
+    }
+  }
+
+  &__trunk {
+    fill: #7a4a2b;
+  }
+
+  &__star {
+    fill: $color-gold;
+    filter: drop-shadow(0 0 10px $color-gold);
+    transform-origin: 160px 40px;
+    animation: tree-star 3s ease-in-out infinite;
+  }
+
+  &__light {
+    fill: $color-gold;
+    animation: tree-twinkle 1.6s ease-in-out infinite;
+
+    &--red {
+      fill: $color-red;
+      animation-delay: 0.5s;
+    }
+
+    &--blue {
+      fill: $color-blue;
+      animation-delay: 1s;
+    }
+
+    &--snow {
+      fill: $color-snow;
+      animation-delay: 0.25s;
+    }
+  }
+}
+
+@keyframes tree-sway {
+  0%,
+  100% {
+    transform: rotate(-0.8deg);
+  }
+  50% {
+    transform: rotate(0.8deg);
+  }
+}
+
+@keyframes tree-star {
+  0%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.18) rotate(12deg);
+  }
+}
+
+@keyframes tree-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}

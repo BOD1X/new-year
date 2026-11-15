@@ -1,0 +1,73 @@
+// Блок: countdown
+.countdown {
+  padding: $space-xl 0;
+  text-align: center;
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: $space-md;
+    font-family: $font-display;
+    font-size: 40px;
+    font-weight: 400;
+    color: $color-snow;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: $space-sm;
+
+    @include respond-to($bp-mobile) {
+      gap: $space-xs;
+    }
+  }
+
+  &__item {
+    @include glass-panel;
+    min-width: 110px;
+    padding: $space-md $space-sm;
+
+    @include respond-to($bp-mobile) {
+      min-width: 0;
+      flex: 1;
+      padding: $space-sm $space-xs;
+    }
+  }
+
+  &__value {
+    display: block;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1;
+    color: $color-gold;
+    font-variant-numeric: tabular-nums;
+
+    @include respond-to($bp-mobile) {
+      font-size: 32px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-top: $space-xs;
+    font-size: $font-size-sm;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+
+    @include respond-to($bp-mobile) {
+      font-size: 11px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__message {
+    margin-top: $space-md;
+    font-family: $font-display;
+    font-size: 44px;
+    color: $color-gold;
+  }
+}

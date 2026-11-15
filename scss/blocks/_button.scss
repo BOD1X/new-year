@@ -1,0 +1,36 @@
+// Блок: button
+.button {
+  display: inline-block;
+  padding: 14px 30px;
+  font: inherit;
+  font-weight: 700;
+  border: 2px solid transparent;
+  border-radius: $radius-pill;
+  cursor: pointer;
+  transition: transform $transition-base, background $transition-base, color $transition-base;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &--primary {
+    color: $color-night-900;
+    background: $color-gold;
+    box-shadow: 0 8px 24px rgba(255, 207, 92, 0.35);
+
+    &:hover {
+      background: $color-snow;
+    }
+  }
+
+  &--ghost {
+    color: $color-snow;
+    border-color: $color-glass-line;
+    background: transparent;
+
+    &:hover {
+      border-color: $color-gold;
+      color: $color-gold;
+    }
+  }
+}

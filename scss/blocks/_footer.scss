@@ -1,0 +1,19 @@
+// Блок: footer
+.footer {
+  padding: $space-lg 0;
+  text-align: center;
+  border-top: 1px solid $color-glass-line;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+
+  &__inner {
+    @include container;
+  }
+
+  &__sign {
+    margin-bottom: $space-xs;
+    font-family: $font-display;
+    font-size: 32px;
+    color: $color-gold;
+  }
+}

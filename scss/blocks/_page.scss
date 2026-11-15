@@ -1,0 +1,22 @@
+// Блок: page (корінь сторінки, клас на <body>)
+.page {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $color-text;
+  background:
+    radial-gradient(circle at 80% 10%, $color-night-500 0, transparent 45%),
+    linear-gradient($color-night-900, $color-night-700 60%, $color-night-900);
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  &__main {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Блок: container
+.container {
+  @include container;
+}

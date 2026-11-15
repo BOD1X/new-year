@@ -1,0 +1,45 @@
+// =========================================================
+// Змінні сайту. Усі загальні значення живуть тут.
+// =========================================================
+
+// --- Кольори ---
+$color-night-900: #070d26;
+$color-night-700: #0f1c47;
+$color-night-500: #1b2d6b;
+$color-gold:      #ffcf5c;
+$color-red:       #e63946;
+$color-green:     #1f8a55;
+$color-blue:      #5aa9ff;
+$color-snow:      #f4f8ff;
+$color-text:      #e9efff;
+$color-text-muted:#a9b8e6;
+$color-glass:     rgba(255, 255, 255, 0.08);
+$color-glass-line:rgba(255, 255, 255, 0.18);
+$color-shadow:    rgba(0, 0, 0, 0.35);
+
+// --- Типографіка ---
+$font-base:    'Nunito', 'Segoe UI', system-ui, sans-serif;
+$font-display: 'Marck Script', 'Brush Script MT', cursive;
+
+$font-size-base: 18px;
+$font-size-sm:   14px;
+$font-size-lg:   22px;
+
+// --- Відступи та радіуси ---
+$space-xs: 8px;
+$space-sm: 16px;
+$space-md: 24px;
+$space-lg: 40px;
+$space-xl: 72px;
+
+$radius-sm: 8px;
+$radius-md: 18px;
+$radius-pill: 999px;
+
+// --- Розміри та брейкпоінти ---
+$container-width: 1080px;
+$bp-tablet: 860px;
+$bp-mobile: 560px;
+
+// --- Анімація ---
+$transition-base: 0.25s ease;

@@ -1,0 +1,31 @@
+// Міксини
+
+// Адаптивність: max-width брейкпоінт
+@mixin respond-to($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Центрування контейнера
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $space-md;
+}
+
+// «Скляна» картка
+@mixin glass-panel {
+  background: $color-glass;
+  border: 1px solid $color-glass-line;
+  border-radius: $radius-md;
+  box-shadow: 0 12px 32px $color-shadow;
+}
+
+// Центрування flex
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
